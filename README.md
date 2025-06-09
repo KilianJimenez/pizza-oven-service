@@ -11,6 +11,8 @@ This project is a Java-based service for handling pizza orders, designed to work
 
 ## Integration with `pizza-order-service`
 
+URL: [pizza-order-service](https://github.com/KilianJimenez/pizza-order-service)
+
 This service is intended to be run alongside the `pizza-order-service` repository. Together, they form a test environment for event-driven message flows, where `pizza-order-service` sends order events that this service processes.
 
 ## Building and Running with Docker
