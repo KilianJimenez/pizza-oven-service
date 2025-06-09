@@ -1,7 +1,6 @@
-package com.example.infrastructure;
+package com.example.service;
 
-import com.example.domain.Order;
-import com.example.domain.OrderService;
+import com.example.model.Order;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,6 @@
-package com.example.application;
+package com.example.service;
 
-import com.example.domain.Order;
-import com.example.domain.OrderService;
+import com.example.model.Order;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -36,7 +35,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     public void sendProcessedOrder(String processedOrder) {
-        rabbitTemplate.convertAndSend("order-completed-exchange","routing-completed-key", processedOrder);
+        rabbitTemplate.convertAndSend("order-completed-exchange","order-completed-queue", processedOrder);
         log.info("Order processed and sent to the oven: {}", processedOrder);
     }
 }

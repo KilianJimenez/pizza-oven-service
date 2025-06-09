@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.model.pizza;
 
 public enum Size {
     M(0),
